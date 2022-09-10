@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres",
+  "info": {
+    "singularName": "genre",
+    "pluralName": "genres",
+    "displayName": "Genre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "richtext"
+    },
+    "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Lenses": {
+      "type": "string"
+    },
+    "Lenses2": {
+      "type": "string"
+    },
+    "Lenses3": {
+      "type": "string"
+    },
+    "Lenses4": {
+      "type": "string"
+    },
+    "Lenses5": {
+      "type": "string"
+    }
+  }
+}
