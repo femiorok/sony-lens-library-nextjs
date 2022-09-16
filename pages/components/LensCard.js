@@ -12,7 +12,7 @@ const clickEvents = () => {
 }
 
   return (
-    <div className='border-2 border-orange-200 rounded-xl w-72 p-8 h-[30rem] shrink-0 flex-initial relative'>
+    <div className='border-2 border-orange-200 bg-orange-100 rounded-xl w-72 p-8 h-[30rem] shrink-0 flex-initial relative'>
         <div className="flex justify-center border-b-2 pb-2">
             <img src={image} alt="sony Lens" className="h-28"/>
         </div>

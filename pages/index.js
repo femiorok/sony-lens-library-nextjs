@@ -16,6 +16,7 @@ export default function Home({ lensData }) {
   const [lensSku, setLensSku] = useState(null);
   const [lensStock, setLensStock] = useState()
   const [query, setQuery] = useState()
+  
 
   const toggleStockModal = () => setShowStockModal((prevState) => !prevState);
   const searchThisLens = (sku) => setLensSku(sku);

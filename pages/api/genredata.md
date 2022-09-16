@@ -1,12 +1,21 @@
 Landscape 
 
-**Sony 16-35mm f/2.8 GM**
+**Sony 16-35mm f/2.8 GM** 
+5895510
+
 
 **Sony 24-105mm f/4 G**
+6383113
 
 **Sony 16-35mm f/4 PZ**
+6503039
+
 
 Sony 18-105 f/4 PZ
+7887254
+
+Sony 10-20mm 
+6509495
 
 Landscape photography is photography centered around capturing the natural beauty of the world. It caters to a diverse range of styles, from calm and natural to stylized and dramatic. Popular among travelers and people interested in nature.
 
@@ -19,11 +28,24 @@ Considerations for this type of photography are:
 
 Travel
 
-Sony 24-70 f/2.8
-Sony 24-70 f/4
-Sony 35 1.8 (crop/full)
-Sony 18-105
-Sony 24mm 2.5
+Sony 24-70 2.8 II
+6506900
+
+Sony 24-70 2.8
+4973500
+
+Sony 35mm FE/E 
+6361325
+1687281
+
+Sony 24mm
+6458478
+
+Sony 18-105 f/4 PZ
+7887254
+
+Sony 10-20mm 
+6509495
 
 Travel photography is perfect for small, mirrorless kits. With the right camera and lens combo, you can capture memories that you can keep in high quality for a lifetime. Travel photographers may value the size of small prime lenses, or the versatility of zoom lenses depending on taste. Low light performance is also of relevance. 
 
@@ -36,10 +58,17 @@ volleyball, a short-telehpoto lens like an 85mm may work if the photographer can
 prefer a lens that allows them to zoom to 200mm+. 
 
 Sony 70-300
+5169500
+Sony 70-200 GM II
+6484729
 Sony 70-200 GM
+4973900
 Sony 55-210
+3651038
 Sony 70-350mm
+6375673
 Sony 85mm 1.8
+6383109
 
 Content Creation
 
@@ -47,10 +76,21 @@ Content creation has taken the world by storm as social media becomes more and m
 to get amazing imagery. For this genre, most subject matter will usually be of people (or the creator themselves) or b-roll (footage/pictures of secondary subjects, like products, environments etc. that are related to
 the primary subject). Based on this, wide angle portrait lenses are popular. 
 
+Sony 24-70 2.8 II
+6506900
+
 Sony 24-70 2.8
+4973500
+
 Sony 35mm FE/E 
-Sony 40mm
+6361325
+1687281
+
 Sony 24mm
+6458478
+
+Sony 10-20mm 
+6509495
 
 Macro & Product
 
@@ -63,8 +103,13 @@ to focus at different distances (or take away your ability to focus altogether),
 to your existing lenses, but not for consistent macro/product work.  
 
 Sony 90mm 
+4623015
+
 Sony 30mm 
+4161537
+
 Sony 50mm
+5613814
 
 Real Estate/Architecture
 
@@ -73,21 +118,37 @@ between getting the entirety of the room and losing some. For example, the Sony 
 75 degrees to approx. 110-105 degrees, which is an increase of 40%. 
 
 Sony 16-35mm 2.8
+5895510
+
 Sony 16-35 f4 pz
+6503039
+
 Sony 11mm 
+6509496
+
 Sony 10-20mm 
+6509495
+
+Sony 20mm
 
 Portraits
 
 Portraits are the bread and butter of many photographers world-wide. Thanks to Sony features like Eye-AF, taking great pictures of people is easier than ever; the hard part is choosing from the abundance of amazing lenses
 available. Portrait photographers utilize "bokeh", or background blur as one of their primary tools for isolating their subject and creating an aesthetically pleasing image. Depending on style and circumstance, the photographer may 
 want to go more wide (such as with a 35mm) to take an environmental portrait, or they may want to go telephoto (such as with an 85mm, sometimes even a 200mm) for headshots or full-body images with beautiful bokeh. Either way,
-Sony have you covered.
+Sony has you covered.
 
 Sony 55mm
+4448022
 Sony 50mm OSS
-Sony 35mm FE/E
+5638022
+
+Sony 35mm FE/E 
+6361325
+1687281
+
 Sony 85mm
+6383109
 
 
 fdd0e38e7fae315ff3f99f6beafbd042a115d76f717e86d6f786d99c555c05e696f4cd6a5b491370aa9a1f3dcc41bbfcb8c39fac9d9ce47a2cbbeb258dadebd2d9c1c030bc8e9f384d51d22bee8cebe1e2b6e541c6c5804922b1b6e4764c2be8414196cff1fc7c7cbc22cc342bbd49f477b459f5cbf7d5b0fbaf776ddbbac946

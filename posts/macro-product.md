@@ -2,6 +2,8 @@
 title: 'Macro & Product'
 excerpt: 'Macro & Product photography and recommended lenses'
 image: '/Macro & Product.jpg'
+fe_lenses: [4623015, 5613814]
+e_lenses: [4161537]
 ---
 
 ## Macro & Product

@@ -2,7 +2,8 @@
 title: 'Sports'
 excerpt: 'Sports photography and recommended lenses'
 image: '/sports.jpg'
-lenses: ''
+fe_lenses: [5169500, 6484729, 4973900, 6383109]
+e_lenses: [3651038, 6375673]
 ---
 
 ## Sports

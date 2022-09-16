@@ -2,7 +2,9 @@
 title: 'Travel'
 excerpt: 'Travel photography and recommended lenses'
 image: '/travel.jpg'
-lenses: ''
+fe_lenses: [6506900, 4973500, 6361325, 6458478]
+e_lenses: [1687281, 7887254, 6509495]
+
 ---
 
 ## Travel

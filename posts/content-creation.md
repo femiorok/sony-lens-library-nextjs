@@ -2,6 +2,8 @@
 title: 'Content Creation'
 excerpt: 'Content Creation photography and recommended lenses'
 image: '/Content Creation.jpg'
+fe_lenses: [6506900, 4973500, 6361325, 6458478]
+e_lenses: [1687281, 6509496]
 ---
 
 ## Content Creation
