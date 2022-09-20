@@ -1,7 +1,7 @@
 import Image from "next/image";
 import sony_alpha_logo from "../public/sony_alpha_logo.svg"
 import Link from "next/link";
-import GenreDropdown from "../components/GenreDropdown";
+import GenreDropdown from "./GenreDropdown";
 
 
 function Hero() {
