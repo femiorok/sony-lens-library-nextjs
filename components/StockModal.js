@@ -1,6 +1,6 @@
 import { useEffect , useState} from "react"
 import Image from "next/image";
-import sony_alpha_logo from '../../public/sony_alpha_logo.svg'
+import sony_alpha_logo from '../public/sony_alpha_logo.svg'
 const StockModal = ({toggleStockModal, showStockModal, lensSku, lensAvailabilty }) => {
 
 const [inStock, setInStock] = useState()

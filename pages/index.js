@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import LensCard from './components/LensCard'
-import Searchbar from './components/Searchbar'
+import LensCard from '../components/LensCard'
+import Searchbar from '../components/Searchbar'
 import Hero from './Hero'
-import StockModal from './components/StockModal'
-import ModalBackdrop from './components/ModalBackdrop'
+import StockModal from '../components/StockModal'
+import ModalBackdrop from '../components/ModalBackdrop'
 import { useState } from 'react'
-import LensList from './components/LensList'
+import LensList from '../components/LensList'
 
 export default function Home({ lensData }) {
 

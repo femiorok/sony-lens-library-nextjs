@@ -4,7 +4,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import process from 'process'
 import md from 'markdown-it'
-import LensCardGenre from './components/LensCardGenre'
+import LensCardGenre from '../components/LensCardGenre'
 
 const genre = ({data, content, feLensData, eLensData}) => {
 console.log(feLensData, eLensData, "lenses")

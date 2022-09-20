@@ -1,5 +1,5 @@
 import React from 'react'
-import search from '../../public/search.svg'
+import search from '../public/search.svg'
 import Image from 'next/image'
 
 
