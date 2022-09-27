@@ -27,31 +27,30 @@ console.log(feLensData, eLensData, "lenses")
 
 export default genre
 
-export async function getStaticProps({params}) {
-  const directory = process.cwd()
-  const files = fs.readFileSync(path.join(directory, 'posts', params.genre + '.md'), 'utf-8')
-  console.log(files, 'titties')
-  const {data, content } = matter(files)
-  console.log(data.fe_lenses, "lil lenses")
-  const fe_lensList = data.fe_lenses.map(lens => lens.toString()).join()
-  const eLensList = data.e_lenses.map(lens => lens.toString()).join()
-  console.log(fe_lensList, "lens strings")
-  const getFeLensData = await fetch(`https://api.bestbuy.com/v1/products(sku in (${fe_lensList}))?apiKey=n6AZysP6mrFp3ljQjiVlvYCQ&sort=name.asc&show=name,salePrice,shortDescription,sku,image&format=json`)
-  const feLensData = await getFeLensData.json()
-  const getELensData = await fetch(`https://api.bestbuy.com/v1/products(sku in (${eLensList}))?apiKey=n6AZysP6mrFp3ljQjiVlvYCQ&sort=name.asc&show=name,salePrice,shortDescription,sku,image&format=json`)
-  const eLensData = await getELensData.json()
+// export async function getStaticProps({params}) {
+//   const directory = process.cwd()
+//   const files = fs.readFileSync(path.join(directory, 'posts', params.genre + '.md'), 'utf-8')
+//   const {data, content } = matter(files)
+//   console.log(data.fe_lenses, "lil lenses")
+//   const fe_lensList = data.fe_lenses.map(lens => lens.toString()).join()
+//   const eLensList = data.e_lenses.map(lens => lens.toString()).join()
+//   console.log(fe_lensList, "lens strings")
+//   const getFeLensData = await fetch(`https://api.bestbuy.com/v1/products(sku in (${fe_lensList}))?apiKey=n6AZysP6mrFp3ljQjiVlvYCQ&sort=name.asc&show=name,salePrice,shortDescription,sku,image&format=json`)
+//   const feLensData = await getFeLensData.json()
+//   const getELensData = await fetch(`https://api.bestbuy.com/v1/products(sku in (${eLensList}))?apiKey=n6AZysP6mrFp3ljQjiVlvYCQ&sort=name.asc&show=name,salePrice,shortDescription,sku,image&format=json`)
+//   const eLensData = await getELensData.json()
 
-  return {
-    props: {
-      data,
-      content,
-      feLensData,
-      eLensData
-    },
-    revalidate: 6000
-  }
+//   return {
+//     props: {
+//       data,
+//       content,
+//       feLensData,
+//       eLensData
+//     },
+//     revalidate: 6000
+//   }
 
-} 
+// } 
 
 export async function getStaticPaths() {
   const directory = process.cwd()
@@ -63,8 +62,6 @@ export async function getStaticPaths() {
       genre: filename.replace('.md', '').toString()
     }
   }))
-
-  console.log(paths, "dick")
   return {
     paths,
     fallback: false,
