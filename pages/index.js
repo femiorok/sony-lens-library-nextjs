@@ -10,7 +10,7 @@ import { useState } from 'react'
 import LensList from '../components/LensList'
 
 export default function Home({ lensData }) {
-
+  console.log(lensData, "lens data")
 
   const [showStockModal, setShowStockModal] = useState(null);
   const [lensSku, setLensSku] = useState(null);
