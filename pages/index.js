@@ -31,7 +31,7 @@ export default function Home({ lensData }) {
         />
       </div>
       <div
-        className="flex flex-wrap mx-auto justify-between gap-8 w-[90vw] my-10 md:my-40"
+        className="flex flex-wrap mx-auto justify-between gap-8 w-[90vw] my-10 md:my-20"
         id="content"
       >
         <LensList lensData={lensData} query={query} zipCode={zipCode} />

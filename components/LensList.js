@@ -19,7 +19,7 @@ const LensList = ({ lensData, query, zipCode }) => {
   }, [query]);
 
   return (
-    <div className="grid grid-cols-2 gap-1">
+    <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 mx-auto gap-1">
       {query ? filteredLenses : cardArray}
     </div>
   );

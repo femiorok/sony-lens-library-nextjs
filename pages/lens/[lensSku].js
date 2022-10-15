@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const lensSku = ({ lelel }) => {
+const LensSku = ({ lelel }) => {
   const [lens, setLens] = useState();
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const lensSku = ({ lelel }) => {
   );
 };
 
-export default lensSku;
+export default LensSku;
 
 export async function getStaticPaths() {
   return {

@@ -6,7 +6,7 @@ import GenreDropdown from "./GenreDropdown";
 function Hero() {
   return (
     <div>
-      <div className="hero py-10 bg-gradient-to-r from-transparent to-orange-500">
+      <div className="hero py-5 bg-gradient-to-r from-transparent to-orange-500">
         <div className="hero-content flex flex-col md:flex-row md:justify-around items-center mx-auto">
           <div className="hidden auto md:inline">
             <Image src={sony_alpha_logo} width={300} height={300} />

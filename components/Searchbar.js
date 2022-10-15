@@ -8,7 +8,7 @@ const Searchbar = ({ query, setQuery }) => {
     setQuery(searchTerms);
   };
   return (
-    <div className="flex justify-center border-2 focus-within:border-4 px-1 border-orange-500/50 animate-pulse md:focus-within:scale-110 focus-within:rounded-xl focus-within:shadow-2xl focus-within:shadow-orange-300  focus-within:animate-none transition-all duration-300 focus-within:border-orange-500">
+    <div className="flex max-w-xl mx-auto my-1 justify-center border-2 focus-within:border-4 px-1 border-orange-500/50 animate-pulse md:focus-within:scale-110 focus-within:rounded-xl focus-within:shadow-2xl focus-within:shadow-orange-300  focus-within:animate-none transition-all duration-300 focus-within:border-orange-500">
       <Image src={search} width={20} height={20} />
       <input
         onChange={filterSearch}
