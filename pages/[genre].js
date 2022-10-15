@@ -6,6 +6,16 @@
 // import md from 'markdown-it'
 // import LensCardGenre from '../components/LensCardGenre'
 
+import React from 'react'
+
+const Genre = () => {
+  return (
+    <div>Genre</div>
+  )
+}
+
+export default Genre
+
 // const genre = ({data, content, feLensData, eLensData}) => {
 // console.log(feLensData, eLensData, "lenses")
 //   return (
