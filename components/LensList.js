@@ -1,38 +1,28 @@
-import LensCard from "./LensCard"
-import { useEffect, useState } from "react"
+import LensCard from "./LensCard";
+import { useEffect, useState } from "react";
 
-const LensList = ({ lensData, toggleStockModal, showStockModal, lensStock, searchThisLens, query }) => {
-const [filteredLenses, setFilteredLenses] = useState()
-const [searchBy, setSearchBy] = useState()
-const [initialCardList, setInitialCardList] = useState()
+const LensList = ({ lensData, query, zipCode }) => {
+  const [filteredLenses, setFilteredLenses] = useState();
 
-useEffect(() => {
-    const cardArray = lensData.products?.map((lens) => 
-    <LensCard key={lens.sku} sku={lens.sku} name={lens.name} image={lens.image} salePrice={lens.salePrice} toggleStockModal={toggleStockModal} showStockModal={showStockModal} lensStock={lensStock} searchThisLens={searchThisLens} />
-    )
-    setInitialCardList(cardArray)
-    
-    setSearchBy(query)
-    const test = initialCardList?.map(el => el.props.name.toLowerCase())
-    console.log(test)
-    const search = searchBy?.toString()
-    console.log(initialCardList)
-    }
-, [query, lensData])
+  const cardArray = lensData.products?.map((lens) => (
+    <LensCard key={lens.sku} lensData={lens} zipCode={zipCode} />
+  ));
 
-useEffect(() => {
-  initialCardList && setFilteredLenses(initialCardList.filter(el => 
-    el.props.name.toLowerCase().includes(query)))
-}, [initialCardList, query])
-
-
-
+  useEffect(() => {
+    setFilteredLenses(
+      lensData.products
+        ?.filter((lens) => lens.name.toLowerCase().includes(query))
+        .map((lens) => (
+          <LensCard key={lens.sku} lensData={lens} zipCode={zipCode} />
+        ))
+    );
+  }, [query]);
 
   return (
-    <div className="flex flex-wrap gap-8 justify-center">
-    {query ? filteredLenses : initialCardList}
+    <div className="grid grid-cols-2 gap-1">
+      {query ? filteredLenses : cardArray}
     </div>
-  )
-}
+  );
+};
 
-export default LensList
+export default LensList;

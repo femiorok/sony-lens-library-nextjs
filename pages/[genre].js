@@ -47,7 +47,7 @@ export async function getStaticProps({params}) {
       feLensData,
       eLensData
     },
-    revalidate: 6000
+    revalidate: 100
   }
 
 } 

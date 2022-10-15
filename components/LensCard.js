@@ -1,31 +1,66 @@
-import StockModal from "./StockModal"
-import { useState } from "react"
+import StockModal from "./StockModal";
+import { useState } from "react";
+import Link from "next/link";
 
-const LensCard = ({ image, name, sku, salePrice, toggleStockModal, showStockModal, searchThisLens }) => {
+const LensCard = ({ lensData, zipCode }) => {
+  const [showStockModal, setShowStockModal] = useState(null);
+  const [inStock, setInStock] = useState();
+  const [timeSinceLastFetch, setTimeSinceLastFetch] = useState();
 
-const [cardSku, setCardSku] = useState(null)
+  const { image, name, sku, salePrice } = lensData;
 
-const clickEvents = () => {
-    toggleStockModal();
-    setCardSku(sku);
-    searchThisLens(sku)
-}
+  const openStockModal = () => {
+    setShowStockModal(true);
+  };
+
+  const shortenedName = () => {
+    const filteredName = name.split(" ");
+    return filteredName.filter(
+      (x) =>
+        x.includes("mm") ||
+        x.includes(".") ||
+        x.includes("FE") ||
+        x.includes("/")
+    );
+  };
 
   return (
-    <div className='border-2 border-orange-200 bg-orange-100 rounded-xl w-72 p-8 h-[30rem] shrink-0 flex-initial relative'>
-        <div className="flex justify-center border-b-2 pb-2">
-            <img src={image} alt="sony Lens" className="h-28"/>
+    <>
+      <div className="border-2 border-orange-200 bg-orange-100 rounded-xl px-1 py-5 flex flex-col">
+        <div className="p-1">
+          <img src={image} alt="sony Lens" className="md:h-28 h-20 mx-auto" />
         </div>
-        <div className="flex flex-col items-center justify-center text-center">
-        <h1 className="my-4">{name}</h1>
-        <h1>{`SKU: ${sku}`}</h1>
-        <h1>{`Current Price: $${salePrice}`}</h1>
-        <button>More Info!</button>
-        <button onClick={clickEvents} >Check Local Stock!</button>
-        
+        <div className="text-center h-full flex flex-col justify-around">
+          <h1 className="my-1 text-lg font-semibold">
+            {shortenedName().join(" ")}
+          </h1>
+          <h1>{`SKU: ${sku}`}</h1>
+          <h1>{`Current Price: $${salePrice}`}</h1>
+          <div className="border border-orange-200 py-2">
+            <Link
+              href={{ pathname: "/lens/[lensSku]", query: { lensSku: sku } }}
+            >
+              <a>Detailed Lens Info</a>
+            </Link>
+          </div>
+          <div className="border border-orange-200 py-2">
+            <button onClick={openStockModal}>Check Local Stock!</button>
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
+      {showStockModal && (
+        <StockModal
+          setShowStockModal={setShowStockModal}
+          sku={sku}
+          setInStock={setInStock}
+          inStock={inStock}
+          setTimeSinceLastFetch={setTimeSinceLastFetch}
+          timeSinceLastFetch={timeSinceLastFetch}
+          zipCode={zipCode}
+        />
+      )}
+    </>
+  );
+};
 
-export default LensCard
+export default LensCard;
