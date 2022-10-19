@@ -35,7 +35,8 @@ const StockModal = ({
         !ignore &&
         (timeElapsed == false ||
           timeElapsed > 300000 ||
-          timeSinceLastFetch === undefined)
+          timeSinceLastFetch === undefined) &&
+        zipCodeCheck()
       ) {
         setTimeSinceLastFetch(currentTime);
         setLoading(true);

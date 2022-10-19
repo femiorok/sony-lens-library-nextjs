@@ -20,31 +20,39 @@ const LensCard = ({ lensData, zipCode }) => {
         x.includes("mm") ||
         x.includes(".") ||
         x.includes("FE") ||
-        x.includes("/")
+        x.includes("/") ||
+        x.includes("GM") ||
+        x.includes("II") ||
+        x.includes("PZ") ||
+        (/[0-9]/.test(x) && (x.includes("F") || x.length <= 5))
     );
   };
 
   return (
     <>
-      <div className="border-2 border-orange-200 bg-orange-100 rounded-xl px-1 py-5 flex flex-col">
+      <div className="px-1 py-2 flex flex-col md:text-base text-sm shadow-md">
         <div className="p-1">
           <img src={image} alt="sony Lens" className="md:h-28 h-20 mx-auto" />
         </div>
-        <div className="text-center h-full flex flex-col justify-around">
-          <h1 className="my-1 text-lg font-semibold">
-            {shortenedName().join(" ")}
-          </h1>
-          <h1>{`SKU: ${sku}`}</h1>
-          <h1>{`Current Price: $${salePrice}`}</h1>
-          <div className="border border-orange-200 py-2">
-            <Link
-              href={{ pathname: "/lens/[lensSku]", query: { lensSku: sku } }}
-            >
-              <a>Detailed Lens Info</a>
-            </Link>
+        <div className="text-center h-full flex flex-col justify-between">
+          <div>
+            <h1 className="font-extrabold text-base md:text-2xl text-white bg-gradient-to-r from-orange-400 to-orange-700 bg-clip-text text-transparent ">
+              {shortenedName().join(" ")}
+            </h1>
+            <h1>{`SKU: ${sku}`}</h1>
+            <h1>{`Current Price: $${salePrice}`}</h1>
           </div>
-          <div className="border border-orange-200 py-2">
-            <button onClick={openStockModal}>Check Local Stock!</button>
+          <div>
+            <div className="mb-1 bg-orange-500/25 border border-orange-200 py-1">
+              <Link
+                href={{ pathname: "/lens/[lensSku]", query: { lensSku: sku } }}
+              >
+                <a>Detailed Lens Info</a>
+              </Link>
+            </div>
+            <div className="bg-orange-500/25 border border-orange-200 py-1">
+              <button onClick={openStockModal}>Check Local Stock!</button>
+            </div>
           </div>
         </div>
       </div>
