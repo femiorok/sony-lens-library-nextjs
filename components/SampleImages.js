@@ -10,9 +10,9 @@ const SampleImages = ({ images, loading }) => {
   return (
     <div>
       <div>
-        <h1>Sample Images</h1>
+        <h1 className="text-center text-2-xl text-orange-500 font-semibold my-4">Sample Images</h1>
       </div>
-      <div className="h-[60vh] md:w-[75vw] lg:w-[60wv] mx-auto relative flex md:flex-col overflow-x-auto flex-nowrap gap-4">
+      <div className="h-[90vh] md:w-[75vw] lg:w-[60wv] mx-auto relative flex md:flex-col overflow-x-auto flex-nowrap gap-4">
         {loading ? (
           <Image src={sony_alpha_logo} className="w-3/4 h-auto" />
         ) : (
