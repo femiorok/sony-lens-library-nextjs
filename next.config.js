@@ -10,6 +10,8 @@ module.exports = {
       "www.reddit.com",
       "www.flickr.com",
       "imgur.com",
+      "staticflickr.com",
+      "live.staticflickr.com",
     ],
   },
   typescript: {

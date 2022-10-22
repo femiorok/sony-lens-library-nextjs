@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import SampleImages from "../../components/SampleImages";
 
-const LensSku = ({ lelel }) => {
+const LensSku = ({ lensInfo }) => {
   const [sampleImages, setSampleImages] = useState();
   const [loading, setLoading] = useState();
-  const lens = lelel;
+  const lens = lensInfo;
 
   useEffect(() => {
     console.log(lensName(), "lens name");
@@ -14,16 +14,19 @@ const LensSku = ({ lelel }) => {
     query.append("lens", lensName());
     const searchQuery = query.toString();
     const fetchSampleImages = async () => {
-      const data = await fetch(`/api/sampleimages?${searchQuery}`);
-      const imagePosts = await data.json();
-      setSampleImages(imagePosts);
+      try {
+        setLoading(true);
+        const data = await fetch(`/api/sampleimages?${searchQuery}`);
+        const imagePosts = await data.json();
+        setSampleImages(imagePosts);
+      } catch {
+        console.error("error");
+      } finally {
+        setLoading(false);
+      }
     };
     fetchSampleImages();
-  }, [lens]);
-
-  useEffect(() => {
-    sampleImages ? setLoading(false) : setLoading(true);
-  }, [sampleImages]);
+  }, []);
 
   const lensName = () => {
     return lens?.name
@@ -59,7 +62,9 @@ const LensSku = ({ lelel }) => {
     if (
       lens?.name?.includes("FE") ||
       lens?.longDescription?.includes("frame") ||
-      lens?.name?.includes("Frame")
+      lens?.name?.includes("Frame") ||
+      lens?.longDescription?.includes("FE") ||
+      lens?.description?.includes("FE")
     ) {
       return true;
     } else {
@@ -120,22 +125,20 @@ const LensSku = ({ lelel }) => {
 
 export default LensSku;
 
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: true,
-  };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params, res }) {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=600, stale-while-revalidate=600"
+  );
   const { lensSku: sku } = params;
+  console.log(sku, "params");
   const fetchUrl = `https://api.bestbuy.com/v1/products(sku=${sku})?apiKey=n6AZysP6mrFp3ljQjiVlvYCQ&sort=description.asc&show=description,details.name,image,longDescription,modelNumber,shortDescription,salePrice,name,features.feature,details.value,mobileUrl,thumbnailImage&format=json`;
   const data = await fetch(fetchUrl);
   const lensFetch = await data.json();
-  const lelel = lensFetch?.products?.[0];
+  console.log;
+  const lensInfo = lensFetch?.products?.[0];
 
   return {
-    props: { lelel },
-    revalidate: 600,
+    props: { lensInfo },
   };
 }
